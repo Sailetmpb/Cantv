@@ -1,0 +1,167 @@
+.main-wrapper {
+    width: 100%;
+    max-width: 1400px; /* Se adapta hasta pantallas de este ancho maximo */
+    margin: 0 auto; /* Centra todo el contenido en las pantallas */
+    box-sizing: border-box; 
+    position: relative;
+}
+
+header {
+    height: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, rgb(26, 26, 158), rgb(31, 114, 194));
+    padding: 5px;
+    align-items: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.menu-icon img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 90px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.Titulo {
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.login-icon {
+    margin-left: auto;
+}
+
+.login-icon img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: -350px;
+    width: 350px;
+    height: calc(100vh - 60px);
+    background-color: rgb(26, 26, 158) !important;
+    color: white;
+    transition: all 0.4s ease !important;
+    padding-top: 60px;
+    z-index: 9999 !important;
+    box-shadow: 5px 0px 15px rgba(0,0,0,0.5);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.sidebar.active {
+    left: 0 !important;
+}
+
+button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button img {
+    width: 50px;
+    height: 50px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    min-height: 300px;
+    flex: 1; /* se encarga de ocupar todo el espacio central disponible */
+}
+
+.cuadro {
+    width: 90%;
+    max-width: 1000px; /* evita que en pantallas mas grandes el cuadro se alargue mas de esta propiedad */
+    background: linear-gradient(to right, rgb(26, 26, 158), rgb(31, 114, 194));
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 20px auto;
+    padding: 15px; 
+    box-sizing: border-box;
+}
+
+.mapa {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center; /* Centra la imagen del mapa*/
+    margin: 20px auto; /*Centra el contenedor en la pantalla*/
+}
+
+.mapa img {
+    width: 100%; 
+    height: auto; /* Mantiene la proporcion original del mapa para no deformarlo */
+    display: block;
+}
+
+footer {
+    background: linear-gradient(to right, rgb(26, 26, 158), rgb(31, 114, 194));
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    align-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    margin-top: auto;
+    box-sizing: border-box;
+
+}

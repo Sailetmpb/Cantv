@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-wrapper {
+    flex: 1;
+}
+
+.user-info-header {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logout-btn-header img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.logout-btn-header img:hover {
+    transform: scale(1.1);
+}
+
+/* Seccion del texto de bienvenida */
+
+.welcome-section {
+    text-align: center;
+    margin: 40px auto 20px auto;
+    color: #1e3c72;
+}
+
+.welcome-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Grid de Modulos */
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+/* Tarjetas*/
+
+.module-card {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-top 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 5px solid transparent;
+}
+
+.module-card:hover:not(.disabled) {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 82, 152, 0.25);
+    border-top: 5px solid #00d2ff;
+}
+
+/* Contenedor de de las imagenes ubicadas en los modulos*/
+
+.module-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Textos dentro de los modulos */
+
+.module-card h3 {
+    font-size: 1.3rem;
+    color: #1e3c72;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.module-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* estilo para los badges */
+
+.badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge.active {
+    background-color: #1e3c72;
+    color: white;
+}
+
+.module-card.disabled {
+    cursor: not-allowed;
+    background-color: #f9f9f9;
+}
+
+.badge.disabled-badge {
+    background-color: #e0e0e0;
+    color: #888;
+}

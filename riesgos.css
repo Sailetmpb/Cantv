@@ -1,0 +1,84 @@
+/* --- Reseteo Total --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: 'Times New Roman'; background-color: #f4f4f4; display: flex; flex-direction: column; }
+
+/* --- Header y Nav (Más limpio) --- */
+header {
+    width: 100%;
+    background: linear-gradient(to right, rgb(26, 26, 158), rgb(31, 114, 194));
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+}
+
+nav { display: flex; align-items: center; width: 100%; }
+.logo { display: flex; align-items: center; }
+.logo img { width: 60px; }
+.Titulo { margin-left: 15px; font-weight: bold; letter-spacing: 2px; font-family: 'Times New Roman', serif; }
+
+.login-icon { margin-left: auto; display: flex; align-items: center; gap: 15px; }
+.login-icon img { width: 40px; filter: hue-rotate(140deg); cursor: pointer; }
+
+/* Ocultamos lo que estorba */
+.menu-icon, .sidebar, .button { display: none !important; }
+
+/* --- Formulario --- */
+.main-wrapper { width: 95%; margin: 20px auto; flex: 1; }
+.formulario-riesgos {
+    background: #fff;
+    padding: 25px;
+    border: 2px solid rgb(26, 26, 158);
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.grid-container { display: flex; flex-direction: column; }
+.grid-container label { font-weight: bold; font-size: 0.85em; margin-bottom: 6px; }
+.grid-container input, .grid-container select { padding: 10px; border: 1px solid #ccc; border-radius: 6px; width: 100%; }
+
+/* --- Botones (Con estilo mejorado) --- */
+.acciones { grid-column: span 3; display: flex; justify-content: center; gap: 20px; margin-top: 15px; }
+.btn-guardar, .btn-exportar { 
+    border: none; padding: 12px 30px; cursor: pointer; border-radius: 6px; 
+    font-weight: bold; color: white; transition: transform 0.2s, background 0.3s; 
+}
+.btn-guardar { background-color: rgb(31, 114, 194); }
+.btn-guardar:hover { background-color: rgb(26, 26, 158); transform: translateY(-2px); }
+
+.btn-exportar { background-color: #6c757d; }
+.btn-exportar:hover { background-color: rgb(31, 114, 194); transform: translateY(-2px); }
+
+/* --- Tabla --- */
+.table-container { width: 100%; overflow-x: auto; margin-top: 20px; border-radius: 8px; }
+.data-table { width: 100%; min-width: 1200px; border-collapse: collapse; font-size: 0.8em; background: white; }
+.data-table th, .data-table td { padding: 12px; border: 1px solid #eee; text-align: center; }
+.data-table thead { background-color: rgb(31, 114, 194); color: white; }
+
+/* Bton de eliminar */
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+.btn-eliminar:hover {
+    transform: scale(1.2);   /* Hace el icono un poco más grande al pasar el mouse */
+}
+
+/* --- Footer --- */
+footer {
+    width: 100%;
+    background: linear-gradient(to right, rgb(26, 26, 158), rgb(31, 114, 194));
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    margin-top: auto;
+}
